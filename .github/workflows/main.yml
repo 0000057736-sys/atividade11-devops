@@ -9,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./atividade10
 
     steps:
       - name: Baixar código do repositório
@@ -17,10 +20,10 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Instalar dependências
-        run: npm install
+        run: npm ci
 
       - name: Rodar Build
         run: npm run build
