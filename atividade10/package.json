@@ -8,6 +8,7 @@
     "build": "CI=false tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
+    
   },
   "dependencies": {
     "react": "^19.3.1",
